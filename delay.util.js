@@ -7,7 +7,6 @@ const {monitorEventLoopDelay} = require('perf_hooks');
 module.exports = {
     runMonitoring: () => {
 
-        let maxDelay = 0;
         const h = monitorEventLoopDelay({resolution: 10});
         h.enable();
         setInterval(() => {
